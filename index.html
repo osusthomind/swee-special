@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d0712">
+<title>For Swee — Happy Birthday 🖤</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;color:#fff;background:
+ radial-gradient(circle at 20% 0%,rgba(239,125,169,.16),transparent 32%),
+ radial-gradient(circle at 100% 35%,rgba(127,91,210,.13),transparent 30%),
+ linear-gradient(160deg,#0b0610,#170c1e 55%,#0c0711);
+ font-family:Arial,Helvetica,sans-serif;min-height:100vh;overflow-x:hidden
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:38px 38px}
+.app{width:min(760px,100%);margin:auto;padding:0 16px 70px;position:relative;z-index:1}
+.top{text-align:center;padding:24px 0 5px;color:#a99aae;font-size:10px;letter-spacing:3px}
+.hero{text-align:center;padding:55px 5px 38px}
+.eyebrow{display:inline-block;border:1px solid rgba(244,155,194,.4);border-radius:999px;padding:8px 14px;color:#f3a5c7;font-size:10px;letter-spacing:2px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(46px,12vw,78px);line-height:.96;margin:23px 0 18px}
+h1 span{color:#ffd0e4;font-style:italic}
+.subtitle{color:#c9bdcf;line-height:1.8;font-size:14px;max-width:570px;margin:auto}
+.envelope-wrap{border:0;background:none;color:#fff;cursor:pointer;margin:28px auto 0;display:block}
+.envelope{width:220px;height:145px;position:relative;margin:auto;filter:drop-shadow(0 22px 35px rgba(0,0,0,.45));transition:transform .45s}
+.envelope:hover{transform:translateY(-6px) scale(1.02)}
+.env-back,.env-front{position:absolute;inset:0;border-radius:12px;background:linear-gradient(145deg,#9f527a,#63314f);border:1px solid rgba(255,255,255,.14)}
+.env-front{clip-path:polygon(0 38%,50% 75%,100% 38%,100% 100%,0 100%);background:#713955}
+.flap{position:absolute;inset:0 0 auto;height:92px;background:linear-gradient(145deg,#b76691,#743955);clip-path:polygon(0 0,100% 0,50% 70%);z-index:3}
+.letter-paper{position:absolute;z-index:2;background:#fff8fc;color:#49243a;width:170px;height:105px;left:25px;top:20px;border-radius:5px;padding:15px;font-family:Georgia,serif;font-size:12px;transform:rotate(-2deg)}
+.envelope-wrap>span{display:block;margin-top:14px;font-size:13px;color:#d7c9da}
+.hint{color:#95879d;font-size:11px;margin-top:14px}
+.card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.095);border-radius:27px;padding:24px;margin:18px 0;box-shadow:0 22px 65px rgba(0,0,0,.3);backdrop-filter:blur(12px)}
+.reveal{animation:up .8s ease both}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.section-title{font-family:Georgia,"Times New Roman",serif;font-size:30px;margin:4px 0 18px}
+.section-title span{color:#f39bc1}
+.letter{font-size:16px;line-height:2;color:#f7edf7}
+.letter p{margin:0 0 18px}
+.closing{margin-top:28px!important}
+.main-photo{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:20px;cursor:pointer}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.photo-card{border:0;padding:0;background:none;border-radius:18px;overflow:hidden;cursor:pointer;position:relative;min-width:0}
+.photo-card img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform .5s}
+.photo-card.tall img{aspect-ratio:3/4}
+.photo-card:hover img{transform:scale(1.05)}
+.photo-card span{position:absolute;left:10px;right:10px;bottom:9px;color:#fff;font-size:11px;text-align:left;text-shadow:0 2px 12px #000;opacity:.95}
+.btn{border:0;border-radius:999px;padding:13px 20px;background:linear-gradient(135deg,#ffd1e5,#ed8db8);color:#25101c;font-weight:700;cursor:pointer}
+.memories-btn,.surprise-btn{display:block;margin:22px auto 0}
+.cake-section{text-align:center}
+.cake{width:150px;height:115px;margin:52px auto 20px;position:relative;cursor:pointer}
+.layer{position:absolute;height:32px;border-radius:10px;background:linear-gradient(#f29ac0,#bf5c88);left:15px;width:120px}
+.l1{bottom:0}.l2{bottom:28px;left:22px;width:106px}.l3{bottom:56px;left:31px;width:88px}
+.cream{position:absolute;bottom:83px;left:31px;width:88px;height:15px;border-radius:50%;background:#fff0f7}
+.candle{position:absolute;bottom:94px;width:7px;height:30px;background:#f5d2e3;border-radius:5px}
+.c1{left:51px}.c2{left:72px}.c3{left:93px}
+.flame{position:absolute;width:12px;height:17px;border-radius:50%;background:#ffd768;box-shadow:0 0 20px #ffd768;bottom:119px;opacity:0}
+.f1{left:48px}.f2{left:69px}.f3{left:90px}
+.cake.lit .flame{opacity:1;animation:flicker .6s infinite alternate}
+@keyframes flicker{to{transform:scale(.78) translateY(2px)}}
+.gift{text-align:center;font-size:72px;cursor:pointer;transition:.4s;margin:18px 0}
+.gift:hover{transform:scale(1.08) rotate(-3deg)}
+.surprise{text-align:center;padding:35px 0}
+.final-message{animation:up .8s ease both}
+.final-message h2{font-family:Georgia,serif;font-size:38px;margin:10px 0}
+.final-message p{color:#d8cbd9;line-height:1.8}
+.signature{font-family:Georgia,serif;font-style:italic;font-size:20px;color:#f4a4c6;margin:18px}
+.hidden{display:none!important}
+.lightbox{position:fixed;inset:0;background:rgba(4,2,7,.94);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
+.lightbox img{max-width:95vw;max-height:85vh;border-radius:18px;object-fit:contain}
+.close{position:fixed;top:18px;right:18px;width:42px;height:42px;border:0;border-radius:50%;background:#ffffff18;color:#fff;font-size:27px;cursor:pointer}
+#lightboxCaption{position:fixed;bottom:22px;left:20px;right:20px;text-align:center;color:#ddd;font-size:12px}
+footer{text-align:center;color:#77687f;font-size:11px;margin-top:30px}
+.heart{position:fixed;z-index:100;pointer-events:none;font-size:20px;animation:rise 2.7s ease-out forwards}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:1}100%{transform:translateY(-220px) scale(1.35);opacity:0}}
+@media(max-width:520px){.app{padding:0 13px 55px}.card{padding:19px;border-radius:22px}.letter{font-size:15px;line-height:1.9}.gallery{gap:8px}.photo-card span{font-size:10px}.envelope{transform:scale(.9)}}
+</style>
+</head>
+<body>
+<main class="app">
+<div class="top">A LITTLE BIRTHDAY SURPRISE ✦</div>
+
+<section class="hero" id="hero">
+<div class="eyebrow">MADE WITH LOVE</div>
+<h1>Happy Birthday,<br><span>My Swee</span> 🖤</h1>
+<p class="subtitle">Some things are too special to fit inside an ordinary message.</p>
+<button class="envelope-wrap" id="openBtn" aria-label="Open birthday letter">
+<div class="envelope">
+<div class="env-back"></div>
+<div class="letter-paper">For the girl I love ♥</div>
+<div class="flap"></div>
+<div class="env-front"></div>
+</div>
+<span>Tap to open your letter</span>
+</button>
+<div class="hint">A little surprise is waiting inside.</div>
+</section>
+
+<section class="letter-section hidden" id="letterSection">
+<div class="card reveal">
+<h2 class="section-title">A Letter <span>For You</span></h2>
+<div class="letter">
+<p><strong>আমার সুইইইই,</strong></p>
+      <p>শুভ জন্মদিন, আমার ভালোবাসা। ❤️</p>
+      <p>তোমাকে নিয়ে লিখতে গেলে সত্যিই মনে হয়, আমার সব শব্দই যেন কম পড়ে যায়। কারণ তুমি শুধু আমার ভালোবাসার মানুষ নও—তুমি আমার শান্তি, আমার সবচেয়ে আপন মানুষ, আমার হাসির অন্যতম কারণ, আর আমার ভবিষ্যৎ নিয়ে দেখা সবচেয়ে সুন্দর স্বপ্নগুলোর একটি।</p>
+      <p>তোমার সঙ্গে কাটানো এতগুলো বছর আমার জীবনের সবচেয়ে সুন্দর অধ্যায়গুলোর একটি। আমাদের হাসি, পাগলামি, ঝগড়া, অভিমান, আবার সবকিছু ভুলে একে অপরের কাছে ফিরে আসা—এই ছোট ছোট মুহূর্তগুলো মিলেই তো আমাদের গল্প। সবসময় হয়তো তোমাকে ঠিকভাবে বুঝতে পারিনি, কখনো তোমাকে কষ্ট দিয়েছি, কখনো রাগ করেছি। কিন্তু একটা জিনিস কখনো বদলায়নি—শেষ পর্যন্ত তোমাকেই কাছে পেতে চেয়েছি।</p>
+      <p>আমি জানি, আমি সবসময় নিখুঁত নই। আমার ভুল আছে, আমার অসম্পূর্ণতা আছে। হয়তো সবসময় আমার মনের কথাগুলো ঠিকভাবে তোমাকে বলতে পারি না। কিন্তু তোমাকে ভালোবাসার ব্যাপারে আমি সত্যি। তোমাকে নিয়ে আমার অনুভূতিটা কোনো সাময়িক গল্প নয়। আমি সত্যিই তোমার হাতটা ধরে অনেক দূর যেতে চাই—আজ, আগামীকাল, আর তার পরের প্রতিটা দিন।</p>
+      <p>আমি চাই তোমার জীবনের প্রতিটা স্বপ্ন পূরণ হোক। তুমি নিজের জন্য যে সুন্দর জীবনটা কল্পনা করো, একদিন সেটা যেন সত্যি হয়। আর সেই ভবিষ্যতের কোথাও যদি আমার জন্য একটু জায়গা থাকে, তাহলে আমি চাই—একদিন আমরা পাশাপাশি দাঁড়িয়ে আমাদের দুজনের স্বপ্নগুলোও একসঙ্গে পূরণ করি।</p>
+      <p>জীবনে যত কঠিন সময়ই আসুক, যত ঝড়ই আসুক, আমি চাই শেষ পর্যন্ত আমরা একে অপরের পাশে থাকি। একসঙ্গে বড় হই, একসঙ্গে ভুল করি, একসঙ্গে সবকিছু ঠিক করি, আর একদিন পেছনে ফিরে তাকিয়ে বলতে পারি—<strong>এতকিছুর পরেও আমরা একসঙ্গে আছি।</strong></p>
+      <p>তোমার হাসিটা যেন কখনো হারিয়ে না যায়। আর কোনোদিন যদি তোমার মন খারাপ হয়, যদি পৃথিবীটা একটু বেশি কঠিন মনে হয়, তাহলে শুধু এটুকু মনে রেখো—দূরে থাকলেও তোমাকে ভালোবাসে এমন একজন মানুষ আছে, যে সবসময় তোমার পাশে থাকতে চায়।</p>
+      <p>আজ তোমার দিন। তাই আজ শুধু চাই তুমি খুব হাসো, খুব ভালো থাকো, নিজের স্বপ্নগুলোর আরও কাছে যাও, আর তোমার চোখের সেই সুন্দর আলোটা যেন কখনো নিভে না যায়।</p>
+      <p>আর তোমার সেই হাসির একটা কারণ হতে চাই আমি—আজও, আগামীকালও, আর যতদিন জীবন আমাদের একসঙ্গে রাখে। 🌸</p>
+      <p><strong>শুভ জন্মদিন, আমার সুইইইই।</strong><br><strong>অনেক অনেক ভালোবাসি তোমাকে।</strong> 🖤</p>
+      <p>সবশেষে শুধু এটুকুই—</p>
+      <p><strong>আজ, আগামীকাল, আর আমাদের জীবনের প্রতিটা আগামী দিনে, আমি তোমাকেই ভালোবেসে যেতে চাই।</strong></p>
+      <p class="closing">চিরকাল তোমার,<br><strong>তোমার মানুষ। 🖤</strong></p>
+</div>
+<button class="btn memories-btn" id="memoriesBtn">See Our Memories 📸</button>
+</div>
+</section>
+
+<section class="memories-section hidden" id="memoriesSection">
+<div class="card reveal">
+<h2 class="section-title">Our <span>Beautiful Memories</span></h2>
+<p class="hint">Tap any photo to see it full size.</p>
+<div class="gallery">
+<button class="photo-card tall" data-photo="memory-1.jpeg"><img src="memory-1.jpeg" alt="Our memory"><span>Somewhere between silly and serious.</span></button>
+<button class="photo-card" data-photo="memory-2.jpeg"><img src="memory-2.jpeg" alt="Our memory"><span>One of those days I wish I could replay.</span></button>
+<button class="photo-card tall" data-photo="memory-3.jpeg"><img src="memory-3.jpeg" alt="Our memory"><span>Your hand. My favourite place.</span></button>
+<button class="photo-card tall" data-photo="memory-4.jpeg"><img src="memory-4.jpeg" alt="Our memory"><span>Keep smiling like this forever.</span></button>
+<button class="photo-card" data-photo="memory-5.jpeg"><img src="memory-5.jpeg" alt="Our memory"><span>Wherever life takes us, I want the story to continue.</span></button>
+</div>
+<button class="btn surprise-btn" id="surpriseBtn">One Last Thing… 🎁</button>
+</div>
+</section>
+
+<section class="surprise hidden" id="surprise">
+<div class="gift" id="gift">🎁</div>
+<div class="hint">Tap the gift</div>
+<div class="final-message hidden" id="finalMessage">
+<div>✦</div>
+<h2>I choose you.</h2>
+<p>Today. Tomorrow. And every day our story continues.</p>
+<p>Happy Birthday, my Swee. ❤️</p>
+<div class="signature">— Sayeem</div>
+<button class="btn" id="replayBtn">Read It Again</button>
+</div>
+</section>
+
+<footer>Made with love, just for Swee. 🖤</footer>
+</main>
+
+<div class="lightbox hidden" id="lightbox">
+<button class="close" id="closeLightbox" aria-label="Close">×</button>
+<img id="lightboxImg" src="" alt="Expanded memory">
+<div id="lightboxCaption"></div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+
+$("openBtn").addEventListener("click",()=>{
+  $("hero").classList.add("hidden");
+  $("letterSection").classList.remove("hidden");
+  window.scrollTo({top:0,behavior:"smooth"});
+  burst("🖤",16);
+});
+
+$("memoriesBtn").addEventListener("click",()=>{
+  $("memoriesSection").classList.remove("hidden");
+  setTimeout(()=>$("memoriesSection").scrollIntoView({behavior:"smooth",block:"start"}),80);
+});
+
+document.querySelectorAll("[data-photo]").forEach(card=>{
+  card.addEventListener("click",()=>{
+    $("lightboxImg").src=card.dataset.photo;
+    $("lightboxCaption").textContent=card.querySelector("span").textContent;
+    $("lightbox").classList.remove("hidden");
+  });
+});
+
+function closeLightbox(){
+  $("lightbox").classList.add("hidden");
+  $("lightboxImg").src="";
+}
+$("closeLightbox").addEventListener("click",closeLightbox);
+$("lightbox").addEventListener("click",e=>{if(e.target===$("lightbox"))closeLightbox()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeLightbox()});
+
+$("surpriseBtn").addEventListener("click",()=>{
+  $("surprise").classList.remove("hidden");
+  $("surprise").scrollIntoView({behavior:"smooth",block:"center"});
+});
+
+$("gift").addEventListener("click",()=>{
+  $("gift").classList.add("hidden");
+  $("finalMessage").classList.remove("hidden");
+  burst("🖤",30);
+});
+
+$("replayBtn").addEventListener("click",()=>{
+  $("finalMessage").classList.add("hidden");
+  $("gift").classList.remove("hidden");
+  $("letterSection").classList.remove("hidden");
+  $("letterSection").scrollIntoView({behavior:"smooth"});
+});
+
+function burst(symbol,count){
+  for(let i=0;i<count;i++){
+    const el=document.createElement("div");
+    el.className="heart";
+    el.textContent=i%3===0?"🌸":symbol;
+    el.style.left=(5+Math.random()*90)+"%";
+    el.style.top=(55+Math.random()*30)+"%";
+    el.style.animationDelay=(Math.random()*.5)+"s";
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),3200);
+  }
+}
+</script>
+</body>
+</html>
