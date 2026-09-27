@@ -8,7 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <style>
+:root{--bg:#10091a;--pink:#ef4f96;--pink2:#ff9bc7;--cream:#fff8fb;--muted:#b8aebe;--card:#fff8fc;--ink:#30182a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;min-height:100%;font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 50% 15%,#281334 0,#10091a 46%,#08060d 100%);color:#fff}body{overflow-x:hidden}.app{width:min(760px,100%);margin:auto;min-height:100svh;padding:42px 18px 72px;position:relative;z-index:2}.stars{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#ffd3e8 1px,transparent 1px);background-size:83px 91px,127px 139px;background-position:12px 25px,55px 70px;opacity:.25}.hero{text-align:center;min-height:78svh;display:flex;flex-direction:column;align-items:center;justify-content:center}.eyebrow{font-size:12px;letter-spacing:2.8px;text-transform:uppercase;color:#d8c8dc;margin-bottom:14px}.hero h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(46px,15vw,82px);line-height:.95;margin:0}.hero h1 span{color:var(--pink2);font-style:italic}.subtitle{max-width:390px;color:#c3b7c9;line-height:1.55;margin:20px auto 30px}.envelope-wrap{border:0;background:none;color:#e5dbe7;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:16px}.envelope{width:230px;height:158px;position:relative;filter:drop-shadow(0 25px 35px rgba(0,0,0,.45));transition:transform .3s}.envelope-wrap:hover .envelope{transform:translateY(-5px)}.envelope-back,.envelope-front{position:absolute;inset:0;border-radius:8px;background:linear-gradient(145deg,#fffdfb,#eadfe0);border:2px solid #d5aa72}.envelope-front{clip-path:polygon(0 40%,50% 75%,100% 40%,100% 100%,0 100%);z-index:4;background:#fffaf6}.flap{position:absolute;left:0;right:0;top:0;height:92px;background:linear-gradient(155deg,#ffc0d8,#ef7fac);clip-path:polygon(0 0,100% 0,50% 75%);border:2px solid #d5aa72;z-index:5;transform-origin:top;transition:transform .7s}.letter-paper{position:absolute;left:15%;right:15%;top:10px;height:130px;background:#fff;color:#8c4c70;border-radius:5px;z-index:2;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-style:italic;font-size:14px}.envelope.open .flap{transform:rotateX(180deg)}.hint{font-size:11px;color:#887b8e;margin-top:22px}.letter,.memories,.surprise{animation:rise .7s ease both}.hidden{display:none!important}.card{background:linear-gradient(180deg,#fffaff,#fff0f7);color:var(--ink);border-radius:28px;padding:30px 24px 26px;box-shadow:0 25px 80px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.55);position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:#ffd1e5;filter:blur(55px);right:-100px;top:-80px;opacity:.7}.card>*{position:relative}.card-top{text-align:center;color:#c93d79;font-size:11px;letter-spacing:2px;font-weight:800;margin-bottom:25px}.card h2{font-family:"Playfair Display",Georgia,serif;font-size:34px;margin:0 0 20px}.card p{font-family:"Playfair Display",Georgia,serif;font-size:17px;line-height:1.8;margin:0 0 17px}.closing{margin-top:28px!important}.memories-btn,.surprise-btn{width:100%;margin-top:12px;border:0;border-radius:999px;padding:16px;background:linear-gradient(90deg,#e7478e,#f37aae);color:white;font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 12px 30px rgba(219,55,126,.25)}.memories{padding-top:45px}.section-heading{text-align:center;padding:0 8px 24px}.section-heading>span{font-size:10px;letter-spacing:2.5px;color:#ff9bc7;font-weight:800}.section-heading h2{font-family:"Playfair Display",Georgia,serif;font-size:32px;line-height:1.1;margin:10px 0}.section-heading p{color:#b9adbf;line-height:1.6;margin:0 auto;max-width:480px;font-size:14px}.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}.photo-card{border:0;padding:0;background:rgba(255,255,255,.06);border-radius:20px;overflow:hidden;position:relative;cursor:pointer;box-shadow:0 16px 40px rgba(0,0,0,.28);min-height:260px}.photo-card.wide{grid-column:1/-1;min-height:300px}.photo-card img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .55s ease,filter .55s ease}.photo-card:hover img{transform:scale(1.035);filter:saturate(1.08)}.photo-card span{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;text-align:left;color:white;font-size:12px;line-height:1.35;background:linear-gradient(transparent,rgba(0,0,0,.72))}.memories>.surprise-btn{margin-top:18px}.surprise{text-align:center;min-height:75svh;padding-top:9vh}.gift{font-size:100px;display:inline-block;cursor:pointer;filter:drop-shadow(0 15px 25px rgba(239,79,150,.25));transition:transform .2s}.gift:active{transform:scale(.9)}.tiny{color:#b8aebe;font-size:13px}.final-message{margin:30px auto 0;max-width:520px;padding:34px 25px;border:1px solid rgba(255,255,255,.12);border-radius:26px;background:rgba(255,255,255,.05);backdrop-filter:blur(12px)}.sparkle{color:#ff9bc7;font-size:30px}.final-message h2{font-family:"Playfair Display",Georgia,serif;font-size:42px;margin:8px 0 12px}.final-message p{color:#d5cbd8;line-height:1.7}.final-message .final-sub{color:#ffb2d1;font-family:"Playfair Display",Georgia,serif;font-size:18px}.signature{color:#ff9bc7;font-family:"Playfair Display",Georgia,serif;font-size:20px;margin:25px 0}.final-message button{background:transparent;color:#fff;border:1px solid #71536d;border-radius:999px;padding:11px 18px;cursor:pointer}.heart{position:fixed;bottom:-30px;animation:float 5s linear forwards;z-index:1;color:#ff83b8;font-size:18px;pointer-events:none}.lightbox{position:fixed;inset:0;background:rgba(4,2,8,.92);backdrop-filter:blur(12px);z-index:20;display:flex;align-items:center;justify-content:center;padding:25px}.lightbox img{max-width:min(92vw,900px);max-height:82vh;object-fit:contain;border-radius:16px;box-shadow:0 30px 90px rgba(0,0,0,.6)}.lightbox.hidden{display:none!important}.close-lightbox{position:fixed;top:18px;right:18px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:white;font-size:30px;line-height:1;cursor:pointer}.lightbox div:last-child{position:fixed;bottom:24px;left:20px;right:20px;text-align:center;color:#ddd;font-size:13px}footer{text-align:center;position:fixed;bottom:13px;left:0;right:0;color:#75697c;font-size:11px;z-index:3}@keyframes rise{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:none}}@keyframes float{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}@media(max-width:500px){.app{padding-top:30px}.card{padding:27px 20px}.card p{font-size:16px;line-height:1.72}.envelope{width:205px;height:142px}.gallery{gap:9px}.photo-card{min-height:230px}.photo-card.wide{min-height:250px}.photo-card span{font-size:11px;padding:30px 12px 12px}.section-heading h2{font-size:28px}}
+
+</style>
 </head>
 <body>
   <div class="stars" aria-hidden="true"></div>
@@ -54,24 +58,24 @@
       </div>
 
       <div class="gallery" id="gallery">
-        <button class="photo-card tall" data-full="assets/memory-1.jpeg" aria-label="Open memory one">
-          <img src="assets/memory-1.jpeg" alt="A memory of Sayeem and Swee together">
+        <button class="photo-card tall" data-full="memory-1.jpeg" aria-label="Open memory one">
+          <img src="memory-1.jpeg" alt="A memory of Sayeem and Swee together">
           <span>Somewhere between silly and serious.</span>
         </button>
-        <button class="photo-card wide" data-full="assets/memory-2.jpeg" aria-label="Open memory two">
-          <img src="assets/memory-2.jpeg" alt="Sayeem and Swee sitting together on a boat">
+        <button class="photo-card wide" data-full="memory-2.jpeg" aria-label="Open memory two">
+          <img src="memory-2.jpeg" alt="Sayeem and Swee sitting together on a boat">
           <span>One of those days I wish I could replay.</span>
         </button>
-        <button class="photo-card tall" data-full="assets/memory-3.jpeg" aria-label="Open memory three">
-          <img src="assets/memory-3.jpeg" alt="Hands held together">
+        <button class="photo-card tall" data-full="memory-3.jpeg" aria-label="Open memory three">
+          <img src="memory-3.jpeg" alt="Hands held together">
           <span>Your hand. My favourite place.</span>
         </button>
-        <button class="photo-card tall" data-full="assets/memory-4.jpeg" aria-label="Open memory four">
-          <img src="assets/memory-4.jpeg" alt="A birthday kiss memory">
+        <button class="photo-card tall" data-full="memory-4.jpeg" aria-label="Open memory four">
+          <img src="memory-4.jpeg" alt="A birthday kiss memory">
           <span>Keep smiling like this forever.</span>
         </button>
-        <button class="photo-card wide" data-full="assets/memory-5.jpeg" aria-label="Open memory five">
-          <img src="assets/memory-5.jpeg" alt="A memory of Sayeem and Swee walking together">
+        <button class="photo-card wide" data-full="memory-5.jpeg" aria-label="Open memory five">
+          <img src="memory-5.jpeg" alt="A memory of Sayeem and Swee walking together">
           <span>Wherever life takes us, I want the story to continue.</span>
         </button>
       </div>
@@ -100,6 +104,24 @@
   </div>
 
   <footer>Made with love, just for Swee.</footer>
-  <script src="app.js"></script>
+  <script>
+const $=s=>document.querySelector(s);
+const openBtn=$('#openBtn'), envelope=$('#envelope'), hero=$('#hero'), letter=$('#letter'), memoriesBtn=$('#memoriesBtn'), memories=$('#memories'), surpriseBtn=$('#surpriseBtn'), surprise=$('#surprise'), gift=$('#gift'), finalMessage=$('#finalMessage'), replayBtn=$('#replayBtn'), hearts=$('#hearts'), lightbox=$('#lightbox'), lightboxImg=$('#lightboxImg'), lightboxCaption=$('#lightboxCaption'), closeLightbox=$('#closeLightbox');
+let audioCtx;
+function tone(freq,dur=.12,delay=0){if(!audioCtx)return;const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.frequency.value=freq;o.type='sine';g.gain.setValueAtTime(0,audioCtx.currentTime+delay);g.gain.linearRampToValueAtTime(.07,audioCtx.currentTime+delay+.02);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+delay+dur);o.connect(g).connect(audioCtx.destination);o.start(audioCtx.currentTime+delay);o.stop(audioCtx.currentTime+delay+dur+.03)}
+function music(){try{audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();[523.25,659.25,783.99,1046.5,783.99,659.25].forEach((n,i)=>tone(n,.22,i*.18));}catch(e){}}
+function burst(){for(let i=0;i<18;i++){const h=document.createElement('span');h.className='heart';h.textContent=['♥','♡','✦'][i%3];h.style.left=Math.random()*100+'vw';h.style.animationDelay=(Math.random()*.9)+'s';h.style.fontSize=(12+Math.random()*18)+'px';hearts.appendChild(h);setTimeout(()=>h.remove(),6500)}}
+function show(section){[hero,letter,memories,surprise].forEach(x=>x.classList.add('hidden'));section.classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});}
+openBtn.addEventListener('click',()=>{music();envelope.classList.add('open');setTimeout(()=>{show(letter);burst()},650)});
+memoriesBtn.addEventListener('click',()=>{show(memories);burst()});
+surpriseBtn.addEventListener('click',()=>{show(surprise);burst()});
+gift.addEventListener('click',()=>{music();gift.style.transform='scale(0) rotate(20deg)';setTimeout(()=>{gift.classList.add('hidden');document.querySelector('.tiny').classList.add('hidden');finalMessage.classList.remove('hidden');burst()},280)});
+replayBtn.addEventListener('click',()=>{finalMessage.classList.add('hidden');gift.classList.remove('hidden');document.querySelector('.tiny').classList.remove('hidden');gift.style.transform='';show(letter)});
+
+document.querySelectorAll('.photo-card').forEach(card=>card.addEventListener('click',()=>{lightboxImg.src=card.dataset.full;lightboxCaption.textContent=card.querySelector('span').textContent;lightbox.classList.remove('hidden');document.body.style.overflow='hidden'}));
+function closeBox(){lightbox.classList.add('hidden');document.body.style.overflow=''}
+closeLightbox.addEventListener('click',closeBox);lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeBox()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox()});
+
+</script>
 </body>
 </html>
