@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#120b1d">
+  <title>আমার সুইইইই — শুভ জন্মদিন 🖤</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f0a16;
+      --card:#191222;
+      --card2:#21172d;
+      --text:#fff8ff;
+      --muted:#c8b9cf;
+      --pink:#f49ac2;
+      --rose:#e96c9d;
+      --line:rgba(255,255,255,.10);
+      --shadow:0 24px 70px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 15% 5%,rgba(244,154,194,.16),transparent 30%),
+        radial-gradient(circle at 90% 20%,rgba(153,112,255,.13),transparent 28%),
+        var(--bg);
+      color:var(--text);
+      font-family:"Noto Sans Bengali",system-ui,sans-serif;
+      min-height:100vh;
+    }
+    button{font:inherit}
+    .wrap{width:min(760px,100%);margin:auto;padding:0 18px 60px}
+    .top{
+      text-align:center;
+      padding:24px 0 10px;
+      font-size:11px;
+      letter-spacing:3px;
+      color:#bba8c7;
+      font-family:system-ui,sans-serif;
+    }
+    .hero{text-align:center;padding:42px 8px 30px}
+    .badge{
+      display:inline-block;
+      border:1px solid rgba(244,154,194,.35);
+      color:var(--pink);
+      padding:7px 13px;
+      border-radius:999px;
+      font-size:11px;
+      letter-spacing:2px;
+      font-family:system-ui,sans-serif;
+      margin-bottom:18px;
+    }
+    h1{
+      margin:0;
+      font-family:"Playfair Display",serif;
+      font-weight:600;
+      font-size:clamp(43px,11vw,76px);
+      line-height:.98;
+    }
+    h1 span{
+      color:#ffd1e4;
+      font-style:italic;
+    }
+    .subtitle{
+      max-width:560px;
+      margin:22px auto 0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:15px;
+    }
+    .card{
+      background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:24px;
+      margin:18px 0;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(12px);
+    }
+    .cover-photo{
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      border-radius:22px;
+      display:block;
+      cursor:pointer;
+      transition:transform .35s ease,filter .35s ease;
+    }
+    .cover-photo:hover{transform:scale(1.01);filter:brightness(1.06)}
+    .section-title{
+      font-family:"Playfair Display",serif;
+      font-size:30px;
+      margin:4px 0 14px;
+    }
+    .section-title span{color:var(--pink)}
+    .letter{
+      font-size:16px;
+      line-height:2;
+      color:#f6edf8;
+    }
+    .letter p{margin:0 0 18px}
+    .closing{
+      margin-top:28px!important;
+      color:#fff;
+      font-size:17px;
+    }
+    .cake-area{text-align:center;padding:18px 0 4px}
+    .cake{
+      position:relative;
+      width:150px;
+      height:110px;
+      margin:35px auto 20px;
+      cursor:pointer;
+    }
+    .layer{
+      position:absolute;
+      left:15px;
+      width:120px;
+      height:31px;
+      border-radius:10px;
+      background:linear-gradient(#f39abf,#c75d8d);
+      box-shadow:inset 0 4px rgba(255,255,255,.18);
+    }
+    .l1{bottom:0}.l2{bottom:27px;width:105px;left:22px}.l3{bottom:54px;width:88px;left:31px}
+    .cream{
+      position:absolute;
+      bottom:82px;
+      left:31px;
+      width:88px;
+      height:14px;
+      border-radius:50%;
+      background:#fff0f7;
+    }
+    .candle{
+      position:absolute;
+      bottom:92px;
+      width:7px;
+      height:29px;
+      border-radius:5px;
+      background:#f7d5e5;
+    }
+    .c1{left:51px}.c2{left:72px}.c3{left:93px}
+    .flame{
+      position:absolute;
+      width:11px;height:16px;
+      border-radius:50% 50% 50% 50%;
+      background:#ffd86b;
+      box-shadow:0 0 18px #ffd86b;
+      bottom:118px;
+      opacity:0;
+      transition:.3s;
+    }
+    .f1{left:49px}.f2{left:70px}.f3{left:91px}
+    .cake.lit .flame{opacity:1;animation:flicker .7s infinite alternate}
+    @keyframes flicker{to{transform:scale(.82) translateY(2px)}}
+    .hint{color:var(--muted);font-size:13px;margin-bottom:14px}
+    .btn{
+      border:0;
+      border-radius:999px;
+      padding:13px 21px;
+      color:#25111c;
+      background:linear-gradient(135deg,#ffd2e5,#f08db8);
+      font-weight:700;
+      cursor:pointer;
+      box-shadow:0 10px 30px rgba(240,141,184,.2);
+    }
+    .memories{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+    .memory{
+      border:0;
+      padding:0;
+      background:none;
+      cursor:pointer;
+      overflow:hidden;
+      border-radius:18px;
+      aspect-ratio:1/1;
+    }
+    .memory.tall{aspect-ratio:3/4}
+    .memory img{
+      width:100%;height:100%;object-fit:cover;
+      display:block;
+      transition:transform .45s ease,filter .45s ease;
+    }
+    .memory:hover img{transform:scale(1.06);filter:brightness(1.08)}
+    .footer{text-align:center;color:#8f7d99;font-size:12px;margin-top:28px}
+    .modal{
+      position:fixed;inset:0;
+      background:rgba(5,3,8,.9);
+      display:none;
+      align-items:center;justify-content:center;
+      padding:20px;
+      z-index:50;
+    }
+    .modal.show{display:flex}
+    .modal img{
+      max-width:min(900px,96vw);
+      max-height:88vh;
+      object-fit:contain;
+      border-radius:18px;
+      box-shadow:0 25px 90px #000;
+    }
+    .close{
+      position:fixed;top:18px;right:18px;
+      width:42px;height:42px;border-radius:50%;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.1);
+      color:#fff;font-size:25px;cursor:pointer;
+    }
+    .heart{
+      position:fixed;
+      pointer-events:none;
+      z-index:100;
+      font-size:20px;
+      animation:rise 2.8s ease-out forwards;
+    }
+    @keyframes rise{
+      0%{transform:translateY(0) scale(.7);opacity:0}
+      15%{opacity:1}
+      100%{transform:translateY(-220px) scale(1.4) rotate(15deg);opacity:0}
+    }
+    .reveal{animation:reveal .9s ease both}
+    @keyframes reveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+    @media(max-width:520px){
+      .wrap{padding-left:14px;padding-right:14px}
+      .card{padding:19px;border-radius:23px}
+      .letter{font-size:15px;line-height:1.9}
+      .memories{gap:8px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">A LITTLE BIRTHDAY SURPRISE ✦</div>
+
+    <header class="hero reveal">
+      <div class="badge">JUST FOR YOU</div>
+      <h1>Happy Birthday,<br><span>My Swee</span> 🖤</h1>
+      <p class="subtitle">
+        কিছু মানুষ জীবনে আসে, আর ধীরে ধীরে পুরো জীবনটারই একটা সুন্দর অংশ হয়ে যায়।
+        তুমি আমার কাছে ঠিক তেমনই একজন।
+      </p>
+    </header>
+
+    <section class="card reveal">
+      <img class="cover-photo" src="memory-1.jpeg" alt="One of our memories" data-photo="memory-1.jpeg">
+    </section>
+
+    <section class="card reveal">
+      <h2 class="section-title">A Letter <span>For You</span></h2>
+
+      <div class="letter">
+        <p><strong>আমার সুইইইই,</strong></p>
+
+        <p>শুভ জন্মদিন, আমার ভালোবাসা। ❤️</p>
+
+        <p>তোমাকে নিয়ে লিখতে গেলে সত্যিই মনে হয়, আমার সব শব্দই যেন কম পড়ে যায়। কারণ তুমি শুধু আমার ভালোবাসার মানুষ নও—তুমি আমার শান্তি, আমার সবচেয়ে আপন মানুষ, আমার হাসির অন্যতম কারণ, আর আমার ভবিষ্যৎ নিয়ে দেখা সবচেয়ে সুন্দর স্বপ্নগুলোর একটি।</p>
+
+        <p>তোমার সঙ্গে কাটানো এতগুলো বছর আমার জীবনের সবচেয়ে সুন্দর অধ্যায়গুলোর একটি। আমাদের হাসি, পাগলামি, ঝগড়া, অভিমান, আবার সবকিছু ভুলে একে অপরের কাছে ফিরে আসা—এই ছোট ছোট মুহূর্তগুলো মিলেই তো আমাদের গল্প। সবসময় হয়তো তোমাকে ঠিকভাবে বুঝতে পারিনি, কখনো তোমাকে কষ্ট দিয়েছি, কখনো রাগ করেছি। কিন্তু একটা জিনিস কখনো বদলায়নি—শেষ পর্যন্ত তোমাকেই কাছে পেতে চেয়েছি।</p>
+
+        <p>আমি জানি, আমি সবসময় নিখুঁত নই। আমার ভুল আছে, আমার অসম্পূর্ণতা আছে। হয়তো সবসময় আমার মনের কথাগুলো ঠিকভাবে তোমাকে বলতে পারি না। কিন্তু তোমাকে ভালোবাসার ব্যাপারে আমি সত্যি। তোমাকে নিয়ে আমার অনুভূতিটা কোনো সাময়িক গল্প নয়। আমি সত্যিই তোমার হাতটা ধরে অনেক দূর যেতে চাই—আজ, আগামীকাল, আর তার পরের প্রতিটা দিন।</p>
+
+        <p>আমি চাই তোমার জীবনের প্রতিটা স্বপ্ন পূরণ হোক। তুমি নিজের জন্য যে সুন্দর জীবনটা কল্পনা করো, একদিন সেটা যেন সত্যি হয়। আর সেই ভবিষ্যতের কোথাও যদি আমার জন্য একটু জায়গা থাকে, তাহলে আমি চাই—একদিন আমরা পাশাপাশি দাঁড়িয়ে আমাদের দুজনের স্বপ্নগুলোও একসঙ্গে পূরণ করি।</p>
+
+        <p>জীবনে যত কঠিন সময়ই আসুক, যত ঝড়ই আসুক, আমি চাই শেষ পর্যন্ত আমরা একে অপরের পাশে থাকি। একসঙ্গে বড় হই, একসঙ্গে ভুল করি, একসঙ্গে সবকিছু ঠিক করি, আর একদিন পেছনে ফিরে তাকিয়ে বলতে পারি—<strong>এতকিছুর পরেও আমরা একসঙ্গে আছি।</strong></p>
+
+        <p>তোমার হাসিটা যেন কখনো হারিয়ে না যায়। আর কোনোদিন যদি তোমার মন খারাপ হয়, যদি পৃথিবীটা একটু বেশি কঠিন মনে হয়, তাহলে শুধু এটুকু মনে রেখো—দূরে থাকলেও তোমাকে ভালোবাসে এমন একজন মানুষ আছে, যে সবসময় তোমার পাশে থাকতে চায়।</p>
+
+        <p>আজ তোমার দিন। তাই আজ শুধু চাই তুমি খুব হাসো, খুব ভালো থাকো, নিজের স্বপ্নগুলোর আরও কাছে যাও, আর তোমার চোখের সেই সুন্দর আলোটা যেন কখনো নিভে না যায়।</p>
+
+        <p>আর তোমার সেই হাসির একটা কারণ হতে চাই আমি—আজও, আগামীকালও, আর যতদিন জীবন আমাদের একসঙ্গে রাখে। 🌸</p>
+
+        <p><strong>শুভ জন্মদিন, আমার সুইইইই।</strong><br>
+        <strong>অনেক অনেক ভালোবাসি তোমাকে।</strong> 🖤</p>
+
+        <p>সবশেষে শুধু এটুকুই—</p>
+
+        <p><strong>আজ, আগামীকাল, আর আমাদের জীবনের প্রতিটা আগামী দিনে, আমি তোমাকেই ভালোবেসে যেতে চাই।</strong></p>
+
+        <p class="closing">চিরকাল তোমার,<br><strong>তোমার মানুষ। 🖤</strong></p>
+      </div>
+    </section>
+
+    <section class="card reveal">
+      <h2 class="section-title">Some <span>Beautiful Memories</span></h2>
+      <p class="subtitle" style="margin:0 0 18px;text-align:left">
+        Tap any photo to view it in full size.
+      </p>
+
+      <div class="memories">
+        <button class="memory tall"><img src="memory-2.jpeg" alt="One of our memories" data-photo="memory-2.jpeg"></button>
+        <button class="memory tall"><img src="memory-4.jpeg" alt="One of our memories" data-photo="memory-4.jpeg"></button>
+        <button class="memory"><img src="memory-3.jpeg" alt="One of our memories" data-photo="memory-3.jpeg"></button>
+        <button class="memory"><img src="memory-5.jpeg" alt="One of our memories" data-photo="memory-5.jpeg"></button>
+      </div>
+    </section>
+
+    <section class="card cake-area reveal">
+      <h2 class="section-title">Make A <span>Wish</span> ✨</h2>
+      <p class="hint">Tap the cake to light the candles, then make a wish.</p>
+
+      <div class="cake" id="cake">
+        <div class="layer l1"></div>
+        <div class="layer l2"></div>
+        <div class="layer l3"></div>
+        <div class="cream"></div>
+        <div class="candle c1"></div>
+        <div class="candle c2"></div>
+        <div class="candle c3"></div>
+        <div class="flame f1"></div>
+        <div class="flame f2"></div>
+        <div class="flame f3"></div>
+      </div>
+
+      <div class="hint" id="hint">Make your wish in your heart.</div>
+      <button class="btn" id="wish">Make A Wish For Us ✨</button>
+    </section>
+
+    <div class="footer">Made for you, with love. 🖤</div>
+  </div>
+
+  <div class="modal" id="modal">
+    <button class="close" id="close">×</button>
+    <img id="modalImg" alt="Memory">
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImg");
+
+    document.querySelectorAll("[data-photo]").forEach(img => {
+      img.addEventListener("click", () => {
+        modalImg.src = img.dataset.photo;
+        modal.classList.add("show");
+      });
+    });
+
+    function closeModal(){
+      modal.classList.remove("show");
+      modalImg.src = "";
+    }
+
+    document.getElementById("close").addEventListener("click", closeModal);
+    modal.addEventListener("click", e => {
+      if(e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", e => {
+      if(e.key === "Escape") closeModal();
+    });
+
+    const cake = document.getElementById("cake");
+    const hint = document.getElementById("hint");
+
+    cake.addEventListener("click", () => {
+      cake.classList.toggle("lit");
+      hint.textContent = cake.classList.contains("lit")
+        ? "The candles are lit. Now make a beautiful wish. 🖤"
+        : "Make your wish in your heart.";
+    });
+
+    document.getElementById("wish").addEventListener("click", () => {
+      cake.classList.add("lit");
+      hint.textContent = "Wish made. Now just smile beautifully. 🖤";
+
+      for(let i=0;i<24;i++){
+        const h=document.createElement("div");
+        h.className="heart";
+        h.textContent=i%2 ? "🖤" : "🌸";
+        h.style.left=(10+Math.random()*80)+"%";
+        h.style.top=(55+Math.random()*30)+"%";
+        h.style.animationDelay=(Math.random()*.5)+"s";
+        document.body.appendChild(h);
+        setTimeout(()=>h.remove(),3000);
+      }
+    });
+  </script>
+</body>
+</html>
