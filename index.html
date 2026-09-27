@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#120b1d" />
+  <title>For Swee — Happy Birthday ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <main class="app">
+    <section class="hero" id="hero">
+      <div class="eyebrow">A little something from my heart</div>
+      <h1>For <span>Swee</span></h1>
+      <p class="subtitle">There are some things I can never fit into a normal message.</p>
+
+      <button class="envelope-wrap" id="openBtn" aria-label="Open your birthday letter">
+        <div class="envelope" id="envelope">
+          <div class="envelope-back"></div>
+          <div class="letter-paper">For the girl I love ♥</div>
+          <div class="flap"></div>
+          <div class="envelope-front"></div>
+        </div>
+        <span>Tap to open</span>
+      </button>
+      <div class="hint">Turn your sound on for a tiny surprise.</div>
+    </section>
+
+    <section class="letter hidden" id="letter">
+      <div class="card">
+        <div class="card-top">♥ HAPPY BIRTHDAY, SWEE ♥</div>
+        <h2>My Swee,</h2>
+        <p>শুভ জন্মদিন। ❤️</p>
+        <p>তোমাকে নিয়ে লিখতে গেলে আমার সব শব্দই somehow কম পড়ে যায়। তুমি শুধু আমার ভালোবাসার মানুষ নও—তুমি আমার শান্তি, আমার সবচেয়ে আপন মানুষ, আর আমার ভবিষ্যৎ নিয়ে দেখা সবচেয়ে সুন্দর স্বপ্নগুলোর একটা।</p>
+        <p>তোমার হাসিটা যেন কখনো হারিয়ে না যায়। আর যদি কোনোদিন মন খারাপ হয়, মনে রেখো—দূরে থাকলেও তোমাকে ভালোবাসে এমন একজন মানুষ সবসময় তোমার পাশে থাকতে চায়।</p>
+        <p>আমি জানি, আমি সবসময় perfect নই। কিন্তু তোমাকে ভালোবাসার ব্যাপারে আমি সত্যি। তোমার হাতটা ধরে অনেক দূর যেতে চাই—আজ, কাল, আর তার পরের প্রতিটা দিন।</p>
+        <p>আজ তোমার দিন। তাই আজ শুধু একটা কথাই চাই—তুমি খুব হাসো, খুব ভালো থেকো, আর তোমার চোখের সেই আলোটা কখনো নিভে না যাক।</p>
+        <p class="closing">চিরদিনের তোমার,<br><strong>Sayeem</strong> ❤️</p>
+        <button class="memories-btn" id="memoriesBtn">A few of our memories 📸</button>
+      </div>
+    </section>
+
+    <section class="memories hidden" id="memories">
+      <div class="section-heading">
+        <span>OUR LITTLE MEMORIES</span>
+        <h2>Some moments I want to keep forever.</h2>
+        <p>Not perfect pictures. Just pieces of us that mean something to me.</p>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <button class="photo-card tall" data-full="assets/memory-1.jpeg" aria-label="Open memory one">
+          <img src="assets/memory-1.jpeg" alt="A memory of Sayeem and Swee together">
+          <span>Somewhere between silly and serious.</span>
+        </button>
+        <button class="photo-card wide" data-full="assets/memory-2.jpeg" aria-label="Open memory two">
+          <img src="assets/memory-2.jpeg" alt="Sayeem and Swee sitting together on a boat">
+          <span>One of those days I wish I could replay.</span>
+        </button>
+        <button class="photo-card tall" data-full="assets/memory-3.jpeg" aria-label="Open memory three">
+          <img src="assets/memory-3.jpeg" alt="Hands held together">
+          <span>Your hand. My favourite place.</span>
+        </button>
+        <button class="photo-card tall" data-full="assets/memory-4.jpeg" aria-label="Open memory four">
+          <img src="assets/memory-4.jpeg" alt="A birthday kiss memory">
+          <span>Keep smiling like this forever.</span>
+        </button>
+        <button class="photo-card wide" data-full="assets/memory-5.jpeg" aria-label="Open memory five">
+          <img src="assets/memory-5.jpeg" alt="A memory of Sayeem and Swee walking together">
+          <span>Wherever life takes us, I want the story to continue.</span>
+        </button>
+      </div>
+
+      <button class="surprise-btn" id="surpriseBtn">One last thing… 🎁</button>
+    </section>
+
+    <section class="surprise hidden" id="surprise">
+      <div class="gift" id="gift">🎁</div>
+      <p class="tiny">Tap the gift</p>
+      <div class="final-message hidden" id="finalMessage">
+        <div class="sparkle">✦</div>
+        <h2>I choose you.</h2>
+        <p>আজও। আগামীকালও। যতদিন আমার গল্পটা লেখা হবে।</p>
+        <p class="final-sub">Happy Birthday, my Swee. ❤️</p>
+        <div class="signature">— Sayeem</div>
+        <button id="replayBtn">Read it again</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="close-lightbox" id="closeLightbox" aria-label="Close photo">×</button>
+    <img id="lightboxImg" src="" alt="Expanded memory">
+    <div id="lightboxCaption"></div>
+  </div>
+
+  <footer>Made with love, just for Swee.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
